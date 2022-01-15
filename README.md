@@ -498,6 +498,13 @@ func (v *Vertex) add(n float64) {
     v.Y += n
 }
 
+// Tags, A tag for a field allows you to attach meta-information to the field which can be acquired using reflection. 
+type album struct {
+	ID     string  `json:"id"`
+	Title  string  `json:"title"`
+}
+
+
 ```
 **Anonymous structs:**
 Cheaper and safer than using `map[string]interface{}`.
@@ -707,6 +714,17 @@ hellomsg := `
 ```
 
 ## Reflection
+```go
+// get struct tag string by reflection
+type S struct {
+		F string `species:"gopher" color:"blue"`
+	}
+
+s := S{}
+st := reflect.TypeOf(s)
+field := st.Field(0)
+fmt.Println(field.Tag.Get("color"), field.Tag.Get("species"))
+```
 ### Type Switch
 A type switch is like a regular switch statement, but the cases in a type switch specify types (not values) which are compared against the type of the value held by the given interface value.
 ```go
