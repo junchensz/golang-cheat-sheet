@@ -259,6 +259,9 @@ var u uint = uint(f)
 i := 42
 f := float64(i)
 u := uint(f)
+
+// string to integer
+i, err := strconv.Atoi(s)
 ```
 
 ## Packages
