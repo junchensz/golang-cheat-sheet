@@ -36,7 +36,7 @@
 18. [Reflection](#reflection)
     * [Type Switch](#type-switch)
     * [Examples](https://github.com/a8m/reflect-examples)
-19. [Time format](#Time format)
+19. [Time format](#Time-format)
 20. [Snippets](#snippets)
     * [Files Embedding](#files-embedding)
     * [HTTP Server](#http-server)
