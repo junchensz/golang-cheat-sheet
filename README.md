@@ -749,6 +749,12 @@ func main() {
 }
 ```
 
+# Time format
+```go
+// layout pattern: 2006-01-02 15:04:05 -0700 MST
+timeText := time.Now().Format("20060102150405")
+```
+
 # Snippets
 
 ## Files Embedding
